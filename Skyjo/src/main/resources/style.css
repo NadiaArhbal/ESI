@@ -1,0 +1,19 @@
+#button{
+    -fx-background-image: url("skyjo.jpg");
+    -fx-background-repeat: stretch;   
+    -fx-background-size: 140  150;
+    -fx-background-position:  center;
+    -fx-effect: dropshadow(three-pass-box, black, 30, 0.5, 0, 0); 
+}
+
+#points{
+   -fx-background-color: #FFFF00;
+   -fx-font-size:15; 
+   -fx-background-radius: 12px;
+}
+
+#root{
+   -fx-background-color: #008000;
+   
+}
+
