@@ -1,7 +1,7 @@
 # Projets ESI
 
-- Skyjo 
+- Skyjo
+- Skyjo Client-Server
+- Chess
 - 
--
-
 
