@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="292.0" prefWidth="520.0" xmlns="http://javafx.com/javafx/15" xmlns:fx="http://javafx.com/fxml/1" fx:controller="esi.bloc3.atlj.skyjo.client.fxml.FXMLDisplayController">
+   <children>
+      <Label fx:id="LBL" layoutX="203.0" layoutY="42.0" prefHeight="153.0" prefWidth="281.0" text="Label" />
+      <Button fx:id="BTN_Ok" layoutX="462.0" layoutY="242.0" mnemonicParsing="false" onAction="#ok" prefHeight="36.0" prefWidth="44.0" text="Ok" />
+      <ImageView fx:id="IV_main" fitHeight="128.0" fitWidth="128.0" layoutX="40.0" layoutY="55.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../data/warning.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
