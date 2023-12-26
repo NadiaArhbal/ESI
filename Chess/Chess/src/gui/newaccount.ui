@@ -1,0 +1,407 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>NewAccount</class>
+ <widget class="QDialog" name="NewAccount">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1226</width>
+    <height>682</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <widget class="QDialogButtonBox" name="buttonBox">
+   <property name="geometry">
+    <rect>
+     <x>770</x>
+     <y>640</y>
+     <width>341</width>
+     <height>32</height>
+    </rect>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Horizontal</enum>
+   </property>
+   <property name="standardButtons">
+    <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+   </property>
+  </widget>
+  <widget class="QGraphicsView" name="gvPP">
+   <property name="geometry">
+    <rect>
+     <x>60</x>
+     <y>300</y>
+     <width>1024</width>
+     <height>256</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lblChoosePic">
+   <property name="geometry">
+    <rect>
+     <x>70</x>
+     <y>260</y>
+     <width>211</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Choose a profile picture : </string>
+   </property>
+  </widget>
+  <widget class="QWidget" name="layoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>60</x>
+     <y>110</y>
+     <width>361</width>
+     <height>111</height>
+    </rect>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <item>
+     <layout class="QVBoxLayout" name="verticalLayout_2">
+      <item>
+       <widget class="QLabel" name="lblUserName">
+        <property name="font">
+         <font>
+          <pointsize>12</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>User Name :</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="verticalSpacer_3">
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>20</width>
+          <height>40</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QLabel" name="lblPwd">
+        <property name="font">
+         <font>
+          <pointsize>12</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Password : </string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="verticalSpacer_4">
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>20</width>
+          <height>40</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QLabel" name="lblNat">
+        <property name="font">
+         <font>
+          <pointsize>12</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Nationality : </string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <item>
+       <widget class="QLineEdit" name="leUserName"/>
+      </item>
+      <item>
+       <spacer name="verticalSpacer">
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>20</width>
+          <height>40</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="lePwd">
+        <property name="echoMode">
+         <enum>QLineEdit::Password</enum>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="verticalSpacer_2">
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>20</width>
+          <height>40</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QComboBox" name="cbCountry">
+        <property name="currentText">
+         <string>Belgium</string>
+        </property>
+        <property name="currentIndex">
+         <number>1</number>
+        </property>
+        <property name="insertPolicy">
+         <enum>QComboBox::InsertAtBottom</enum>
+        </property>
+        <item>
+         <property name="text">
+          <string>Australia</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Belgium</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Brazil</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Canada</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>China</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Croatia</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Czech Republic</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Denmark</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Egypt</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Finland</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>France</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>German</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Greece</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Hungary</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>India</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Ireland</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Italy</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Japan</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Luxembourg</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Mexico</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Nederlands</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Nigeria</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Norway</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Pakistan</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Peru</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Portugal</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Romania</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Russia</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>South Korea</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Spain</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Switzerland</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Thailand</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Turkey</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>UK</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>USA</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Vietnam</string>
+         </property>
+        </item>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>accepted()</signal>
+   <receiver>NewAccount</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>248</x>
+     <y>254</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>157</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>rejected()</signal>
+   <receiver>NewAccount</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>316</x>
+     <y>260</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>286</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
