@@ -78,3 +78,18 @@ et d'afficher une fenêtre d'informations en fonction des status de fin fu model
   - Main : main du projet client  
   - SkyjoClientGui : contient toutes les méthodes de vue nécessaires  
   - TopMain : appel au main  
+
+### *Fenêtre FXML :*  
+  - FXMLConnexion.fxml : fenetre reprenant et demandant les données du client pour
+se connecter   
+
+
+
+
+
+
+
+
+
+
+
