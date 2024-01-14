@@ -8,8 +8,9 @@ Lors du lancement de l’application, l’utilisateur devra se connecter à dist
 base de données tournant sur un serveur dédié qui contient la liste des utilisateurs
 par leur pseudo et mot de passe, etc…  
 Nous utiliserons les outils QT creator pour la réalisation de la GUI.  
-  
-![image](https://github.com/NadiaArhbal/ESI/assets/99414756/da311dba-bd87-43ad-a812-7a0070a6c640)
+
+<p align="center">
+<img src="https://github.com/NadiaArhbal/ESI/assets/99414756/da311dba-bd87-43ad-a812-7a0070a6c640">
 
 ## :large_blue_circle: Mode d'emploi précis
 Lors du lancement du jeu, une fenêtre de paramétrage est affichée.  
@@ -30,7 +31,9 @@ Pour s’inscrire, l’utilisateur doit choisir un nom d’utilisateur, un mot d
 choisir sa nationalité et sélectionner une photo de profil. Une fois fait, cliquez sur ok
 pour démarrer une partie.  
 
-![image](https://github.com/NadiaArhbal/ESI/assets/99414756/fdb57676-d61c-427d-9fde-f92af2b04061)   
+<p align="center">
+  <img src="https://github.com/NadiaArhbal/ESI/assets/99414756/fdb57676-d61c-427d-9fde-f92af2b04061">  
+  
 Malheureusement, nous n’avons pas réussi à communiquer correctement
 avec le serveur pour sauvegarder les comptes des joueurs. Par conséquent, la
 partie “inscription” et “connexion” ne fonctionne pas.  
@@ -46,7 +49,7 @@ Notre projet se divise en plusieurs sous-projets comme suit :
 
 Le sous-projet est composé d’une classe facade :
 - Game : utilisée par ChessView.  
-Elle permet d’exécuter un mouvement ou une promotion sur une pièce et d’une série de classes permettant de représenter un jeu d’échecs :
+Elle permet d’exécuter un mouvement ou une promotion sur une pièce et d’une série de classes permettant de représenter un jeu d’échecs.
 - Board : Il s’agit de la plus grosse classe.  
 Elle se charge de vérifier tous les mouvements possibles du jeu d'échecs. Elle gère également le Roque, la prise “En passant” et la Promotion.  
 Cette classe ne permet uniquement de vérifier les mouvements produits.
@@ -93,19 +96,24 @@ par les joueurs. Elle comporte 2 parties :
 Il s’agit de 2 QGraphicsView qui sont rafraîchis à chaque mouvements du
 jeu.  
 
-![image](https://github.com/NadiaArhbal/ESI/assets/99414756/d703b087-78c2-4de0-bf58-a71d8d46357d)
+<p align="center">
+  <img src="https://github.com/NadiaArhbal/ESI/assets/99414756/d703b087-78c2-4de0-bf58-a71d8d46357d">  
+
 La classe History se charge d’afficher chaque mouvement du jeu. Il s’agit
 d’un QTableWidget, divisé en 2 colonnes, la colonne de gauche affiche les
 mouvements des Blancs et la colonne de droite affiche les mouvements des Noirs.
 
-![image](https://github.com/NadiaArhbal/ESI/assets/99414756/8bbd9434-322e-4a9a-9c78-8ceac5c57057)
+<p align="center">
+  <img src="https://github.com/NadiaArhbal/ESI/assets/99414756/8bbd9434-322e-4a9a-9c78-8ceac5c57057">    
+
 Les mouvements sont représentés par une chaîne de caractères : [Position
 de départ][Position d'arrivée].
 La classe PlayerInfo affiche les informations des joueurs. Elle affiche le nom
 d’utilisateur du joueur, son elo (niveau au échec), et sa photo de profil. C’est la seule
 partie de l’affichage qui ne sera pas dynamique tout au long de la partie.
 
-![image](https://github.com/NadiaArhbal/ESI/assets/99414756/f6059d45-e2de-4f39-9bdf-5f3ebe969aee)
+<p align="center">
+  <img src="https://github.com/NadiaArhbal/ESI/assets/99414756/f6059d45-e2de-4f39-9bdf-5f3ebe969aee">    
 
 #### c) Test
 Ce sous projet contient les tests pour le modèle. Il permet de tester la
@@ -123,23 +131,29 @@ l’application.
 #### f) Stockfish
 Stockfish est un exécutable qui est lancé à partir de Qprocess dans le sous
 projet GUI qui communique grâce au protocole UCI (voir learning-resources) ou
-alternativement ici http://wbec-ridderkerk.nl/html/UCIProtocol.html.
+alternativement ici http://wbec-ridderkerk.nl/html/UCIProtocol.html.  
+
 Stockfish va permettre de générer le mouvement de la pièce adverse en
-fonction des mouvements notés sous la forme Longue Algébrique.
-Exemple notre programme écrit comme commande au stdin de Stockfish :
+fonction des mouvements notés sous la forme Longue Algébrique.  
+Exemple notre programme écrit comme commande au stdin de Stockfish :  
+
+```
 > position startpos moves e2e4
 > go movetime 1500 “millisecondes”
 -> Le programme répond au bout d’une seconde et demi
 > bestmove e7e5
+```
+
+  
 Notre programme sera donc en mesure d'interpréter les simples commandes
 fournies par Stockfish tant que l’enchaînement des mouvements par leurs notations
-et cohérentes.
+et cohérentes.  
 Celui-ci nous permet également de détecter les deux conditions de fin d’une
-partie de jeux d’échecs, le pat et l’échec et mat.
-Ceci est implémenté dans la méthode readyRead().
-Malheureusement, Stockfish ne permet pas de gérer les contraintes liés au
+partie de jeux d’échecs, le pat et l’échec et mat.  
+  Ceci est implémenté dans la méthode readyRead().  
+  Malheureusement, Stockfish ne permet pas de gérer les contraintes liés au
 board, c’est pour ça qu’il fallait que l’équipier responsable du Model soit apte à gérer
-toutes tentatives de mouvements erronées avant même d’envoyer les informations
+toutes tentatives de mouvements erronées __avant même__ d’envoyer les informations
 au moteur Stockfish, si une mauvaise position est donnée à Stockfish, alors il
-donnera simplement le mouvement du joueur qui à mal effectué son mouvement.
+donnera simplement le mouvement du joueur qui à mal effectué son mouvement.  
 
