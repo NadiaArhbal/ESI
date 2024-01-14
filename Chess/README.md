@@ -130,8 +130,7 @@ l’application.
 
 #### f) Stockfish
 Stockfish est un exécutable qui est lancé à partir de Qprocess dans le sous
-projet GUI qui communique grâce au protocole UCI (voir learning-resources) ou
-alternativement ici http://wbec-ridderkerk.nl/html/UCIProtocol.html.  
+projet GUI qui communique grâce au protocole UCI (voir learning-resources) ou [ici](http://wbec-ridderkerk.nl/html/UCIProtocol.html).  
 
 Stockfish va permettre de générer le mouvement de la pièce adverse en
 fonction des mouvements notés sous la forme Longue Algébrique.  
