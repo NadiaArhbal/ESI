@@ -28,8 +28,7 @@ Notre projet est subdivisée en plusieurs projet :
 Ce projet comporte les classes suivantes :
   - ModelException : classe appellée qui renvoie une exception au cas ou le modèle a
 échoué.  
-  - Card : représentant les cartes du jeu (càd des cartes ayant comme valeurs de -2 à
-12)  
+  - Card : représentant les cartes du jeu (càd des cartes ayant comme valeurs de -2 à 12)  
   - Deck : représentant le paquet de cartes ayant pour chaque valeur de cartes un
 nombre de cartes associées
   - Discard : représentant la défausse sur laquelle les cartes sont déposées ou piocher  
