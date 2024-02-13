@@ -82,8 +82,23 @@ et d'afficher une fenêtre d'informations en fonction des status de fin fu model
   - FXMLConnexion.fxml : fenetre reprenant et demandant les données du client pour
 se connecter  
 
-  - FXMLDisplay.fxml : fenêtre affichant une erreur  
+  - FXMLDisplay.fxml : fenêtre affichant une erreur 
+  - FXMLWaitForOpponent.fxml : fenêtre d'attente attendant le 2ème client pour pouvoir démarrer une partie  
 
+###SkyjoMessages :  
+Ce projet comporte les classes suivantes :  
+  - MessageEndConnection : message à destination d'un client lui indiquant d'arrêter son processus  
+  - MessageExistingConnection : message envoyé à un client si il tente de se connecter avec le même pseudo qu'un client déjà connecté lui indiquant d'arrêter son processus  
+  - MessageExistingPseudo : message envoyé à un client qui tente de créer un pseudo déjà existant. Un message d'erreur est affiché  
+  - MessagePasswordFalse : message envoyé à un client qui tente de se connecter avec un pseudo existant mais dont le mot de passe est erroné. Un message d'erreur est affiché.  
+  - MessageSendEndGame : message contenant le winner,le score du gagnant,le score du perdant, à ajouter à la base de données ATLJ 6  
+  - MessageProfile : message qui permet de mettre à jour les données du client, initialise, envoit le jeu aux joueurs et le jeu en cours aux spectateurs  
+  - MessageSendModel : message qui envoit la dernière version du jeu au client non actif  
+  - MessageWait : message permettant au client d'attendre la connexion de son adversaire  
+  - Type (énumération) : les différents types des messages échangés  
+  - Players: représentant une liste de tous les utilisateurs (joueurs) connectés  
+  - User : représentant un utilisateur   
+ainsi qu'une interface Message qui est utilisé pour tous les messages échangés.  
 
 
 
