@@ -85,7 +85,7 @@ se connecter
   - FXMLDisplay.fxml : fenêtre affichant une erreur 
   - FXMLWaitForOpponent.fxml : fenêtre d'attente attendant le 2ème client pour pouvoir démarrer une partie  
 
-###SkyjoMessages :  
+### SkyjoMessages :  
 Ce projet comporte les classes suivantes :  
   - MessageEndConnection : message à destination d'un client lui indiquant d'arrêter son processus  
   - MessageExistingConnection : message envoyé à un client si il tente de se connecter avec le même pseudo qu'un client déjà connecté lui indiquant d'arrêter son processus  
@@ -100,7 +100,45 @@ Ce projet comporte les classes suivantes :
   - User : représentant un utilisateur   
 ainsi qu'une interface Message qui est utilisé pour tous les messages échangés.  
 
+### SkyjoServer :  
+Ce projet comporte les classes suivantes :  
+  - SkyjoServerConsole : console pour le serveur  
+  - L'interface AbstractServer : sert à écouter les demandes de connexion de la part des clients  
+  - ConnectionToClient : classe créée par le serveur lorsqu'un client se connecte  
+  
+  
+  
+## Description d'une table SQL :  
+Voici le schéma conceptuel de notre base de données :   
 
+-- _Player_  
+Les joueurs de la partie. A partir des données récupérées via la fenêtre de login, un
+joueur sera inséré dans la table player. Un pseudo est unique. Si un client tente de
+créer un joueur avec le même pseudo, une exception est lancée. Si un client tente de
+se connecter avec un pseudo existant et un mot de passe qui n'est pas lié à ce pseudo,
+une exception est lancée.  
+A la fin de chaque partie, le nombre de parties jouées et gagnées sont mises à jour.  
+  - playerID : Identification du joueur  
+  - pseudo : Le nom du joueur (unique)  
+  - password : Le mot de passe du joueur  
+  - nbPlayed : Le nombre de partie jouées  
+  - nbWin : Le nombre de partie gagnées  
+
+-- _Game_   
+La partie de Skyjo. La game possède un id ainsi que l'id des 2 joueurs. A la fin de la
+partie, le gagnant, son score et celui du perdant sont stockés dans la base de données.  
+  - gameID : Identification de la partie  
+  - player1ID : Identification du joueur 1  
+  - player2ID : Identification du joueur 2  
+  - winner : Identification du gagnant  
+  - winnerScore : Le score du gagnant  
+  - loserScore : le score du perdant  
+
+-- _Sequences_  
+Pour chaque table de données, on a une table utilitaire (table sequences) qui permet de
+donner une ligne de départ.  
+  - id : Identification de la séquence, la ligne de départ  
+  - sValue : la valeur de départ générée  
 
 
 
