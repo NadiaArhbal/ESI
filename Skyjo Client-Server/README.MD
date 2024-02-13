@@ -124,7 +124,7 @@ A la fin de chaque partie, le nombre de parties jouées et gagnées sont mises �
   - nbPlayed : Le nombre de partie jouées  
   - nbWin : Le nombre de partie gagnées  
 
--- _Game_   
+-- __Game__   
 La partie de Skyjo. La game possède un id ainsi que l'id des 2 joueurs. A la fin de la
 partie, le gagnant, son score et celui du perdant sont stockés dans la base de données.  
   - gameID : Identification de la partie  
@@ -134,7 +134,7 @@ partie, le gagnant, son score et celui du perdant sont stockés dans la base de 
   - winnerScore : Le score du gagnant  
   - loserScore : le score du perdant  
 
--- _Sequences_  
+-- __Sequences__  
 Pour chaque table de données, on a une table utilitaire (table sequences) qui permet de
 donner une ligne de départ.  
   - id : Identification de la séquence, la ligne de départ  
