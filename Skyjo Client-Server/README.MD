@@ -80,7 +80,12 @@ et d'afficher une fenêtre d'informations en fonction des status de fin fu model
 
 ### *Fenêtre FXML :*  
   - FXMLConnexion.fxml : fenetre reprenant et demandant les données du client pour
-se connecter   
+se connecter  
+
+  - FXMLDisplay.fxml : fenêtre affichant une erreur  
+
+
+
 
 
 
